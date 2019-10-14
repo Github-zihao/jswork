@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charest="utf-8">
-    <title>表格练习</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <script>
-        alert("haha");
+    let score=Math.round(89.9)
+    let remark = score>=90?'优秀':score>=80?'良好':score>=70?'中等':score>=60?'及格':'不及格'
+    let 小饼干 = 0
+        switch(remark){
+            case '优秀':
+                小饼干 += 5
+            case '良好':
+                小饼干 += 4
+            case '中等':
+                小饼干 += 3
+            case '及格':
+                小饼干 += 2
+            case '不及格':
+                小饼干 += 1
+            defanlt:
+                小饼干 += 0
+
+        }
+    console.log(小饼干)    
     </script>
 </head>
 <body>
     
-
-    <div>haha</div>
-
-
-
-
-
-
 </body>
-
-
-
-
-
-
-
-
-
 </html>
