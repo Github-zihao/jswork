@@ -12,6 +12,7 @@ var str = '<table border="1">'
 }
 str += '</table>'
 document.getElementById('table1').innerHTML = str
+//9X9的空格表
 
 
 str = '<table border="1">'
@@ -26,6 +27,7 @@ str = '<table border="1">'
         }
     str += '</tr>'
 }
+//倒9X9的空格表
 str += '</table>'
 //设置div的html文档内容
 document.getElementById('table2').innerHTML = str
@@ -45,3 +47,4 @@ str = '<table border="1">'
 str += '</table>'
 //设置div的html文档内容
 document.getElementById('table3').innerHTML = str
+//倒九九乘法表
