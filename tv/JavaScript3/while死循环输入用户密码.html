@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //输入用户名密码，如果正确，提示正确，如果错误，一直输入：while
+        var yonghuming = prompt("请输入用户名");
+        var mima = prompt("请输入密码");
+        while (true){
+            if(yonghuming=="admin"&&mima=="888888"){
+                //&&  并且的意思
+                alert("登陆成功");
+                break;
+            }
+            else{
+                alert("用户名或者密码有误");
+                yonghuming = prompt("请输入用户名");
+                mima = prompt("请输入密码");
+            }
+            alert("over");
+        }
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

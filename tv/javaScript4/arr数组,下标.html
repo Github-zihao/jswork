@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    //求和
+    var arr=[24,26,22,24,25,29];
+    //var he =24+26+22+24+25+29
+    // var he = arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5];
+    //
+
+
+    // 法一
+    // var he=0      //用来记录和的
+    // for(var i=0;i<=5;i++){
+    //     he=he+arr[i]
+    // }
+        var he = 0;
+        //arr，leagth指的是数组的长度  
+        //下面这样做比较好  电脑可以执行少很多个程序
+        var len=arr.length;
+        // for(var i=0;i<=arr.length-1;i++){
+            for(var i=0;i<len;i++){
+            he=he+arr[i];
+        }
+    document.write(he);
+
+
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

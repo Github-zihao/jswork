@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>二维数组</title>
+    <script type="text/javascript">
+        var arr = [
+            [19, 12, 13, 14, 100, 1234],
+            [22, 23, 23, 23],
+            [33, 34, 35, 36]
+        ];
+        /*var he = 0;
+        for (var i = 0; i < arr.length; i++) { //arr[i]
+            for (var j = 0; j <= arr[i].length-1; j++) {
+                he = he + arr[i][j];
+            }
+        }
+        document.write("和为"+he);*/
+
+        /*求最2维数组最大值和最大值的下标;
+        var max=0;是错的  可能会有负数的存在*/
+        var max=arr[0][0];
+        var xbi;//用来表示最大值的下标i
+        var xbj;//用来表示最大值的下标j
+         for(var i=0;i<=arr.length-1;i++){//3个1维数组
+            for(var j=0;j<=arr[i].length-1;j++){//一维数组的个数
+                if(max<arr[i][j]){
+                    max=arr[i][j];
+                    xbi=i;
+                    xbj=j;
+                }
+            }
+         }
+        document.write("最大值"+max); 
+        document.write("最大下标为"+xbi+","+xbj);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

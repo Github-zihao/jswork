@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交换变量</title>
+    <script type="text/javascript">
+    //第一个
+    /*var array = [33, 35,  54, 34, 53, 77, 29];
+        var s = 0;
+        var s1 = 0;
+        //循环控制趟数
+        for (var i = 0; i < array.length - 1; i++){
+            //控制两两比较的次数
+            for (var j = 0 ; j < array.length - 1;j++){
+                //两两比较  从小到大排序
+                if (array[j] > array[j+1]){
+                    //交换位置
+                    var tmp = array[j];
+                    array[j] =array[j+1];
+                    array[j+1] = tmp;
+                }
+                s++;//记录内循环的次数
+            }
+            s1++;//记录外循环的次数
+        }
+    console.log("内循环的次数："+s);
+    console.log("外循环的次数:"+s1);
+    console.log(array);*/
+    
+
+    //、、两两比较    减少次数 提高效率
+    /*var array = [33, 35,  54, 34, 53, 77, 29];
+        var s = 0;
+        var s1 = 0;
+        for (var i = 0; i < array.length - 1; i++){
+            //因为一个循环后最后一名已经确定了，所以下面循环可以减i
+            for (var j = 0 ; j < array.length - 1 - i;j++){
+                if (array[j] > array[j+1]){
+                    var tmp = array[j];
+                    array[j] =array[j+1];
+                    array[j+1] = tmp;
+                }
+                s++;
+            }
+            s1++;
+        }
+    console.log("内循环的次数："+s);
+    console.log("外循环的次数:"+s1);
+    console.log(array);*/
+
+
+
+    //最终模式 
+    //思路  可以用 Boolean判断是否进入下一个循环
+
+    /*为什么 isSort = ture，不能写在循环外面
+    因为 交换位置 isSore = folse. isSort的值永远是false。
+    我们要检测的是某一趟是否交换位置*/  
+    var array = [33, 35, 54, 34, 53, 77, 29];
+        var s = 0;
+        var s1 = 0;
+        for (var i = 0; i < array.length - 1; i++){
+            var isSort = true;
+            for (var j = 0 ; j < array.length - 1 - i;j++){
+                //如果交换位置，证明没排浩，如果没交换位置，证明排好。
+                if (array[j] > array[j+1]){
+
+                    isSort =false;//还没有交换好
+                    //交换位置
+                    var tmp = array[j];
+                    array[j] =array[j+1];
+                    array[j+1] = tmp;
+                }
+                s++;
+            }
+            s1++;
+
+            if(isSort){
+                //如果排序好了
+                break;
+            }
+        }
+    console.log("内循环的次数："+s);
+    console.log("外循环的次数:"+s1);
+    console.log(array);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
