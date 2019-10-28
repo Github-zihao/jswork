@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <script>
+        //函数的返回值
+        //如果return 后面跟内容了，返回return后面的内容
+        //如果return 后面没有跟内容，返回underfined
+        //如果函数内部没有写跟return，返回underined
+
+        //求一组数中的最大值
+        var array = [5,3,6];
+
+
+//        console.log(getMax(array))
+        console.log(getMax(undefined))
+        /**
+        *求最大值
+        *@param array {Array}
+        *@returns {number}
+        */
+        function getMax(array){
+            array = array || [];
+            //todo 判断数组中的第一个数是最大值
+            if(array.length == 0){
+                //undefined
+                return; //这个位置函数会返回什么值?
+            }
+            
+
+            //假设数组中的第一个数是最大值
+            var max = array[0];
+            for(var i = 0;i<array.length;i++){
+                max=max < array[i]?array[i]:max;
+            }
+
+            //返回最大值
+            return max;
+        }
+
+        // function test(){
+        //     var n=5;
+        // }
+        // console.log(test())
+
+
+        
+        //翻转数字，放回一个新数组
+        //对数组排序，从小到大
+        //对数组排序，重小到大
+
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

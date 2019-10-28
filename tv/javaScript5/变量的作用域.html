@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //变量的作用域，变量在什么地方可以使用
+
+        //全局作用域  script 都可以用   不过占内存
+        // var name = "a";
+        // console.log(name);
+
+        // function f1 (){
+        //     console.log(name);
+        // }
+        // f1();
+        
+        //局部作用域：在函数内部声明变量 只能在该函数内部使用
+        function f1(){
+            a = 5;
+
+            console.log(a);
+            var name = "aaa";
+            console.log(name);
+        }
+        f1();
+
+        console.log(a);
+
+
+
+
+
+
+        //当变量超出作用域之后，变量会被消毁
+        //不适用var 声明的是全局变量
+
+
+
+
+        //javascript中没有块级作用域
+
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
