@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //面向对象是对面向过程的封装
+    //在js中所谓的对象就是键值对的集合
+
+
+    //继承就是自己没有的，拿别人有的来用
+    //其中有一个最简单的办法，叫混入(mix)
+function mix( o1,o2 ){
+    for(var k in o2){
+        o1[ k ] = o2[ k ];
+    }
+}
+var o1 = { name:'张三'};
+var o2 = { age:19 };
+</script>
+</html>

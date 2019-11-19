@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        //闭包特点：闭包有权利代用其父级环境的变量信息
+
+        function f1(){
+            var week = "Sunday";
+            function f2(){
+                console.log('星期：'+week);
+            }
+            return f2
+        }
+        var ff = f1();//f1执行后会返回发函数，函数（对象）对ff进行赋值（引用赋值）
+
+        //调用闭包函数ff，使其发生执行
+        ff();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

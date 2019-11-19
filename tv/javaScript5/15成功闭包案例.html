@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    // 利用闭包实现制作多个独立的数组元素函数
+    var arr = new Array();
+
+    for(var i=0;i<4;i++){
+        // arr[i] = 闭包;
+        arr[i] = f1(i);//实参
+    }                  //通过调用F1()闭包机智，生成多个独立函数，并且每个函数的i变量都是不同值
+    
+    //闭包机智
+    function f1(n){//形参
+        function f2(){//闭包机智可以访问父级变量
+            console.log(n);
+        }
+        return f2;
+    }
+
+    arr[3]();
+    arr[0]();
+    arr[1]();
+    arr[2]();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

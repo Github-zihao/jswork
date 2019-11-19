@@ -1,0 +1,20 @@
+//你和你爸爸 ， 你自克隆  你和克隆共享dad  这叫浅拷贝
+    你全家都克隆了   这叫深拷贝
+
+/*this在函数（方法）内部，表示调用该函数（方法）的对象。
+
+
+
+    var car = {name: '法拉利'};
+        var p = {name:'张三',age:19,gender:'男',car:car};
+
+        //让所有的对象都有拷贝的方法
+        car.deepCopy = deepCopy;
+        p.deepCopy = deepCopy;
+
+        var newP = p.deepCopy();
+
+        p.name = '李四';
+        p.age = 20;
+        p.gender = '女';
+        p.car.name = '兰博基里';

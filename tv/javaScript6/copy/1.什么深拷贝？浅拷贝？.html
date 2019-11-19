@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    //你和你爸爸 ， 你自克隆  你和克隆共享dad  这叫浅拷贝
+    你全家都克隆了   这叫深拷贝   
+</body>
+
+<script type="text/javascript">
+//var pCopy = P; //这个不是拷贝，没有对象做任何拷贝行为
+        //浅拷贝代码实现
+        // var pCopy = {};
+        // pCopy.name = p.name;
+        // pCopy.age = p.age;
+        // pCopy.car = p.car;
+
+
+        //浅拷贝代码实现
+        var pCopy = {};
+        pCopy.name = p.name;
+        pCopy.age = p.age;
+        pCopy.car = {}
+        pCopy.car.name = p.car.name;
+</script>
+</html>

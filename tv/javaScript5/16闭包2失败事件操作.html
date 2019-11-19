@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    //给li设置mouseover(鼠标移入事件)和mouseout(出)事件，效果：鼠标滑过高亮显示当前行
+    window.onload = function(){            //代号名字 bytag
+        var lis = document.getElementsByTagName('li');
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmouseover = function(){
+                //都是代表li的当前选着项
+                //this.style.backgroundColor="pink";
+                lis[i].style.backgroundColor="lightblue";
+            }
+            lis[i].onmouseout=function(){
+                // this.style.backgroundColor="";
+                lis[i].style.backgroundColor="";
+            }
+        }
+    }
+    </script>
+    
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <h2>闭包事件操作</h2>
+    <ul>
+        <li>奔驰</li>
+        <li>宝马</li>
+        <li>奥迪</li>
+    </ul>
+</body>
+</html>

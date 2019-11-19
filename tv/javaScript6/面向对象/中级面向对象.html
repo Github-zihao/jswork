@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    function DivTag(){
+        this.DOM  = document.createElement('div');
+        this.appendTo = function(node){
+            //需要将this.DOM加到node中
+            node.appendChild( this.DOM );
+            return this;
+        };
+        this.css = function( option ){
+            for ( var k in option){
+                this.DOM.style[ k ] = option[ k ];
+            }
+            return this;
+        }
+    }
+
+    // new DivTag().appendTo()
+    // new DivTag().css()
+
+    new DivTag().appendTo( document.body ).css({
+        broder:'1px solid red',
+        width:'100px',
+        height:'100px'
+    })
+    new DivTag().css({
+        broder:'1px solid green',
+        width:'200px',
+        height:'200px'
+    }).appendTo(document.body);
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+    //面向对象的方式去思考
+    //1，抽取对象（名词提炼法）：div，body
+    //2，分析属性与方法（动词提炼）：加到，设置样式
+
+
+    function DivTag(){
+        //黄色是方法
+        this.DOM  = document.createElement('div');
+        this.__加到 = function(node){
+            //需要将this.DOM加到node中
+            node.appendChild( this.DOM );
+        };
+                    //name,value对应的是css的名字和值
+        this.__设置样式 = function( name,value ){
+            this.DOM.style[ name ] = value;
+        };
+                            //选项
+        this.css = function( option ){
+            for ( var k in option){
+                this.DOM.style[ k ] = option[ k ];
+            }
+        }
+    }
+
+    var divTag = new DivTag();
+
+    divTag.__加到(document.body);
+
+    divTag.css({
+        'border':'10xp dotted bule',
+        'width': '200px',
+        'height': '100px',
+        'backgroundColor': 'pink'
+    });
+
+
+    // divTag.__设置样式( 'border','1xp solid red');
+
+    // divTag.__设置样式('width', '400px');
+    // divTag.__设置样式('height', '100px');
+    // divTag.__设置样式('backgroundColor', 'pink');
+</script>
+</html>

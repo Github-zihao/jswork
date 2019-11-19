@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var deepCopy = function(){
+    // 创建一个数组
+    var temp = {};
+    for(var k in this){
+        //拷贝
+        if(typeof temp[k]==='object'){
+            temp[k]=this[k].deepCopy;
+        }else{
+            temp[k]=this[k];
+        }
+        return temp;
+    }
+};
+
+
+
+
+var car = {name: '法拉利'};
+        var p = {name:'张三',age:19,gender:'男',car:car};
+
+        //让所有的对象都有拷贝的方法
+        car.deepCopy = deepCopy;
+        p.deepCopy = deepCopy;
+
+        var newP = p.deepCopy();
+
+        p.name = '李四';
+        p.age = 20;
+        p.gender = '女';
+        p.car.name = '兰博基里';
+
+
+
+</script>
+</html>

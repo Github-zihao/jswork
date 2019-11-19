@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="text/javascript">
+    //继承dog
+    var dog = {hobby:'看家护林',run:'在跑步'};
+    function Cat(){
+        this.mingzi = "bosi";
+        this.color = "while"
+        this.log = 4;
+    }
+    Cat.prototype = dog
+    var kitty = new Cat();
+
+    //对象访问成员：对象[成员名称]、对象.成员名称。
+    for(var k in kitty){
+        console.log(k+"--"+kitty[k]);
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

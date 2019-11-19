@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包函数案例</title>
+    <script>    
+    //①闭包案例-创建数组元素
+    
+    var arr = new Array();
+
+    for(var i=0;i<4;i++){
+        arr[i] = function(){
+            console.log(i);
+        }
+        //arr[i]();  这样可以  不过不是想象的样子
+    }
+    /*以上for循环的本质效果如以下代码：
+    for(var i=0;i<4;i++){}
+     arr[0] = function(){console.log(i);}
+     arr[1] = function(){console.log(i);}
+     arr[2] = function(){console.log(i);}
+     arr[3] = function(){console.log(i);}
+    */
+
+    
+     我们需要的数组是这个样子的：
+    是4个独立的function，并且每个function内部都有自己可以访问的个性化信息
+    因此可以通过闭包实现
+    arr[0] = function(){console.log(0);}
+    arr[1] = function(){console.log(1);}
+    arr[2] = function(){console.log(2);}
+    arr[3] = function(){console.log(3);}
+     
+
+    //在此时i的值定格为“4”的信息     i是全局变量
+    arr[2]();      //2  【4】
+    arr[1]();      //1  【4】
+    arr[0]();      //0  【4】
+    arr[3]();      //3  【4】
+    //以上4个数组元素函数调用没有输出理想的信息，而是4的信息
+    //原因：通过for循环可以生成4个function，并且全部的function都访问‘同一个’i变量
+    //     而系统里边i变量只有一个，就是全局变量i，而后面各个元素是在后面进行调用
+    //     因此都调用到4的信息
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

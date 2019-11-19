@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var p = {
+        name:'张三',
+        age:'19',
+        gender:'男',
+        copy:function(){
+            //1，创建对象
+            var temp = {}//temp 临时的
+            //2，复制属性，在copy中使用this 表示当前对象
+            for (var k in this){
+                temp[k]=this[k];
+            }
+            //3，返回对象
+            return temp;
+            //需要返回对象
+        }
+    };
+
+    var p2 = p.copy();
+
+    p.name = '李四';
+    p.age = 20;
+    p.gender = '女';
+
+    //补充构造函数内容
+    var o = {};
+    o.func = p.copy;//这里不加或号，加了就是调用它
+
+    o.func();
+    //这样  this就是他的了 o 的
+
+</script>
+</html>

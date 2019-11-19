@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+            //在页面输出6个10到20之间的两位数
+            for(var i=1;i<=6;i++){
+                //先获取0到20之间的数，再加上是
+                var n = Math.random()*20;
+                n=n+10;
+                document.write(n+"<br/>")
+            }
+            //求整
+            for(var i=1;i<=6;i++){
+                //先获取0到20之间的数，再加上是
+                var n = Math.random()*21;//0到20.9999999999
+                n=n+10;//10到30.999999999999
+                //取整  公平的  先下取整
+                n = Math.floor(n);
+                document.write(n+"<br/>")
+            }
+        
+        </script>
+</head>
+<body>
+    
+</body>
+
+</html>

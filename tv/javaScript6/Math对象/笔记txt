@@ -1,0 +1,26 @@
+Math对象
+Math.pow(n,m);求n的m次方
+Math.abs(n);求n的绝对值     |-6|=6
+Math.round(n);求n四舍五入的值
+Math.floor(n);求n的向下取整的值：不大于n的最大整数
+    Math.floor(2.3);//2
+    Math.floor(2.5);//2
+    Math.floor(2);//2
+    Math.floor(2.9);//2
+Math.ceil(n)求n的向上取整的值：不小于n的最小整数
+    Math.ceil(2.3);//3
+    Math.ceil(2.6);//3
+    Math.ceil(2);//2
+    Math.ceil(2.1);//3
+Math.random():获得一个0到1之间的随机值，注意：能取到0但不能取到1
+        1，求0到20之间的随机数：Math.random()*20
+        2，求0到60之间的随机数：Math.random()*60
+        3，求0到90之间的随机数：Math.random()*90
+    求0到n之间的随机数：Math.random()*n
+        a,求10到20之间的随机数：
+            a） 想办法变成0到某数字：0到10在加上10
+            b） 在变换成10到20之间的随机数：Math.raondom()*10+10
+        b,求30到60的随机数：
+            a） 先把整体-去30，就变成0到30+30
+            a） Math.random()*30+30
+    求n到m之间的随机数(n<m):Math.random()*(m-n)+n

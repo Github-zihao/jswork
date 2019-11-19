@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var car = {
+        name: '法拉利',
+        deepcopy: function () {
+            //假设copy已经写好
+            for (var k in this){
+            if(typeof temp[k] === 'object'){
+                temp[k]=this[k].deepCopy;
+            }else{
+                temp[k]=this[k];
+            }
+        }
+        //3，返回对象
+        return temp;
+        }
+    };
+    var p = { name:'张三',car:car,
+    deepCopy:function(){
+        //假设copy已经写好
+        //1，创建一个对象
+        var temp={};
+        //2，拷贝属性，在判断如果是引用类型需要深拷贝
+
+        /*        if(p.name 是不是引用对象 == false){
+        temp.name = p.name;
+        }else{
+            temp.name = p.name.copy();
+        }
+*/        
+        for (var k in this){
+            if(typeof temp[k] === 'object'){
+                temp[k]=this[k].deepCopy;
+            }else{
+                temp[k]=this[k];
+            }
+        }
+        //3，返回对象
+        return temp;
+    }
+    
+    //需要保证所有的对象中都有copy方法，那么就可以简化了
+    //写一个deepCopy函数，每一个对象都是用<对象>.deepCopy=deepCopy
+    //来使得当前对象就有拷贝的方法，那么就可以实现深拷贝了
+</script>
+
+</html>
