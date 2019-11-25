@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       var chusheng = new Date("2001/2/25 1:1:1");//创建出生时候的时间日期对象
+       var xianzai = new Date();
+       var n1 = chusheng.getTime();//获取从1970年到出生的毫秒值
+       var n2 = xianzai.getTime();//获取生活到现在的毫秒值
+       var jieguo = n2 - n1;//获取生活到现在的毫秒值
+       jieguo = jieguo/24/60/60/1000;
+       document.write("生活到现在为止经过了"+jieguo);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

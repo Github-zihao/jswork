@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //可能不是语法错误
+console.log(1);
+console.log(2);
+
+    var o1;
+    try{
+    //throw{name:'jim',age:8,sex:'女'};
+    //throw new Error( '我是一个自定义抛出的异常，哈哈哈' )
+    o1 =  new Error( '我是一个自定义抛出的异常，哈哈哈' );   
+    throw o1;
+    
+    }catch( e ){
+
+        console.log( e === o1 );
+
+    }
+
+console.log(3);
+console.log(4);
+console.log(5);
+</script>
+</html>
