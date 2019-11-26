@@ -34,7 +34,7 @@ function calender (y){
             //星期自增
             w =(w+1 > 6)?0:w+1;
         }
-        html += '<table>';
+        html += '</table>';
     }
     html += '</div>';
     return html;
