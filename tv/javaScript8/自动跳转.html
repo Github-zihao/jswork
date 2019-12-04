@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d1{
+            font-size: 60px;
+            color: red;
+        }
+    </style>
+    <script>
+        window.onload=init;//一进来就开始计时
+        function init(){
+            window.setTimeout("tiaozhuan()",5000);
+            window.setInterval("shijian()",1000);
+        }
+        function tiaozhuan() {
+            location.replace("http://www.baidu.com");
+        }
+        function shijian() {
+            var obj = document.getElementById("d1");
+            var n = obj.innerHTML;
+            obj.innerHTML=n-1;
+        }
+    </script>
+</head>
+<body>
+    账号注册成功，页面自动在<span id="d1">5</span>秒跳转到首页
+</body>
+</html>

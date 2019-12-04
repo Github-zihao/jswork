@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function fn() {
+            var n = history.length;
+            alert(n);
+        }
+        function fun() {
+            location.href="history.back.html";
+        }
+        function func(){
+            history.forward();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="点击查看length" onclick="fn()">
+    <input type="button" value="点击跳转" onclick="fun()">
+    <input type="button" value="点击forward" onclick="func()">
+</body>
+</html>

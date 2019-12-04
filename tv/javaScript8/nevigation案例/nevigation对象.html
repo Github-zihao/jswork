@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //打开页面之后，弹出用户是用什么浏览器
+        window.onload=init;
+        function init(){
+            var obj = navigator.userAgent;//获取了浏览器信息
+            if(/*是火狐*/obj.indexOf("Firefox")!=-1){
+                alert("你用的是火狐好厉害的样子")
+            }else if(obj.indexOf("Chrome")!=-1){
+                alert("你非常时髦既然用的是谷歌")
+            }else{
+                alert("杀马特非主流你abcd用的是ie浏览器")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="点击" onclick="fn()">
+</body>
+</html>
