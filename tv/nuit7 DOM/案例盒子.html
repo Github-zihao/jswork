@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab-box">
+        <div class="tab-head">
+            <div class="tab-head-div current">标签一</div>
+            <div class="tab-head-div">标签二</div>
+            <div class="tab-head-div">标签三</div>
+            <div class="tab-head-div tab-head-r">标签四</div>
+        </div>
+        <div class="tab-box">
+                <div class="tab-body">
+                    <div class="tab-head-div current"> 1 </div>
+                    <div class="tab-head-div"> 2 </div>
+                    <div class="tab-head-div"> 3 </div>
+                    <div class="tab-head-div"> 4 </div>
+                </div>
+    </div>
+
+</body>
+<script>
+    var tabs = document.getElementsByClassName('tab-head-div');
+    var divs = document.getElementsByClassName('tab-hody-div');
+
+    for (var i=0;i<tabs.length;++i){
+        tabs[i].onmouseover = functon(){
+            for(var i=0;i<divs.length;++i){
+                if(tabs[i] == this){
+                    divs[i].class
+                }
+            }
+        }
+        }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件对象作用</title>
+    
+</head>
+<body>
+    <input type="text" id="username" value="" />
+</body>
+</html>
+<script>
+    var it = document.getElementById('username');
+
+    it.onkeydown = function(evt){
+        var num = evt.keyCode;
+        console.log(evt.keyCode);
+        if(num==38){
+            console.log('上');
+        }
+        if(num==40){
+            console.log('下');
+        }
+        if(num==37){
+            console.log('左');
+        }
+        if(num==39){
+            console.log('右');
+        }
+    }
+</script>

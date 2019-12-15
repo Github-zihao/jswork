@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>事件作用对象</h2>
+</body>
+</html>
+<script>
+    var hh = document.getElementsByTagName('h2')[0];
+    hh.onclick=function(evt){
+        console.log(evt.clientX+"---"+evt.clientY);//获得鼠标相对DOM区域坐标
+        console.log(evt.pageX+"---"+evt.pageY);    //获得鼠标相对DOM区域坐标(给考虑滚动条距离)
+        console.log(evt.screenX+"---"+evt.screenY);//获得鼠标相对屏幕的坐标
+    }
+</script>

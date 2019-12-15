@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>属性值操作</h2>
+    <input type="text" name="username" value="tom" class="oringe" zxcvb="123" /><br />
+    <input type="button" value="获取" onclick="f1()" />
+    <input type="button" value="设置" onclick="f2()" />
+</body>
+<script>
+    var nm = document.getElementsByTagName('input')[0];
+    function f1(){
+        //获取节点属性值
+        console.log(nm.type);
+        console.log(nm.name);
+        console.log(nm.value);
+        console.log(nm.className);  //class保留字 不能直接用 要className
+
+        //自定义
+        console.log(nm.getAttribute('zxcvb')); //130
+        console.log(nm.getAttribute('value')); //tom
+    }
+    function f2(){
+        //设置节点属性值
+        nm.name="usertel";
+        nm.value = "123456789";
+        nm.className = "banana";
+        //nm.type = "checkbox";   //不推荐，存在兼容问题
+        //nm.zxcvb = 100; //自定义属性修改失败
+        nm.setAttribute('zxcvb',100); //自定义修改ok
+        nm.setAttribute('class','pear'); //规定修改ok
+    }
+</script>
+</html>

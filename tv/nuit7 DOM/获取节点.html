@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>属性节点获取</h2>
+    <input type="text" name="username" value="tom" class="orange" zxcvb="123" />
+</body>
+<script>
+    var nm = document.getElementsByTagName('input')[0];
+    console.log(nm.attributes);//[type="text" name="username" value="tom" class="orange" zxcvb="123"]
+
+    //获取具体的节点属性
+    console.log(nm.attributes.value);//value="tom"
+    console.log(nm.attributes.value.nodeType); //2 属性节点
+</script>
+</html>

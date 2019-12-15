@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>获取元素节点</h2>
+    <input type="text" id="username" value="xiaoming" /><br/>
+    <input type="text" id="usermail" value="xiaoming@qq.com" /><br/>
+    <input type="text" id="usertel" value="123456789" /><br/>
+</body>
+</html>
+
+<script>
+    var hh = document.getElementsByTagName('h2');
+    console.log(hh);//HTMLCollection[h2]
+    console.log(hh[0]);//<h2>
+
+    var its = document.getElementsByTagName('input');
+    console.log(its);//获取多个input     //HTMLCollection [0: input#username  1: input#usermail  2: input#usertel
+    console.log(its[0]);//获取第一个
+</script>
