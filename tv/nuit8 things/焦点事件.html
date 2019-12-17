@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tips" id="tips"></div>
+    <div class="box">
+        <p><label>用户名：<input id="user" class="ipt" type="text"></label></p>
+        <p><label>密码：<input id="pass" class="ipt" type="password"></label> </p>
+        <p><button class="btn" id="login">登陆</button></p>
+    </div>
+</body>
+</html>
+<script>
+    window.onload = function(){
+        addBlur($('user'));
+        addBlur($('pass'));
+    };
+    function $(obj){
+        return document.getElementById(obj);
+    }
+    function addBlur(obj){
+        obj.onload = function () {
+            isEmpty(this);//检查内容
+        };
+    }
+    function isEmpty(obj){
+        if(obj.value === ''){
+            $('tips').style.display = 'block';
+            $('tips').innerHTML = '注意：输入内容不能为空';
+        }else{
+            $('tips').style.display = 'none';
+        }
+    }
+    </script>
