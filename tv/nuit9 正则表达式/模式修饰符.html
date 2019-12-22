@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>忽略大小写（i）的全局匹配（g）</title>
+   <script>
+       //模式修饰符
+       //i------->忽略大小写
+       //g------->全局匹配(进行全局匹配的时候不给体现模式单元内容)
+//       var str = "Today Is Monday";
+//       var reg = [a-z]+/ig;//["Today", "Is", "Monday"]  忽略大小写的全局匹配
+
+       var str = "Today1000 Is1001 Monday1010";
+       var reg = /[a-z]+([0-9]+)/ig;//["Today1000", "Is1001", "Monday1010"]
+
+       var rst = str.match(reg);
+       console.log(rst);//(rst[0])=Today1000
+
+
+   </script>
+</head>
+<body>
+    
+</body>
+</html>

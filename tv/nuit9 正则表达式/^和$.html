@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //没有特殊说明就是“单次”匹配
+        //从字符串左边找到第一个符合模式的内容即可
+
+        //^（托字符）：表示字符串的“开始”位置
+        //$：匹配输入字符串的“结尾”位置
+
+        var str = "xiaoming like banana";
+        var reg = /^banana/; //null
+        var reg = /banana$/; //["banana"]
+        var reg = /^xiaoming/; //["xiaoming"]
+
+        //^和$符号存在于全部的正确的正则表达式里边
+        //^和$可以保证正则对目标的字符串的“完整”匹配
+        //有些场合要求正则匹配必须是“完整匹配”
+
+        var str = "13909090909";//手机号码
+        //{m} 前边单元严格出现m次
+        var reg = /13[0-9]{9}/;   //13开始的  后面严格执行{m}次
+        //防止用户乱输
+        var reg = /^13[0-9]{9}$/;   //^和$可以防止用户在你要获取的数字前后中间乱输入
+        var rst = str.match(reg);
+        console.log(rst);
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

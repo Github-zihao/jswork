@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件  按Enter键切换</title>
+</head>
+<body>
+    <p>用户姓名：<input type="text"></p>
+    <p>电子邮箱：<input type="text"></p>
+    <p>手机号码：<input type="text"></p>
+    <p>个人描述：<input type="text"></p>
+    <script>
+        var inputs = document.getElementsByTagName('input');
+        for(var i=0;i<inputs.length;++i){
+            inputs[i].onkeydown = function(event){
+                var e = event || window.event;
+
+                if(e.keyCode === 13){
+                    for(var i=0;i<inputs.length;i++){
+                        if(inputs[i] === this){
+                            var index = i + 1 >= inputs.length ? 0 : i + 1;
+                            break;
+                        }
+                    }
+                }
+                if(inputs[index].type === 'text'){
+                    inputs[index].focus();//focus() 方法用于为 checkbox 赋予焦点。
+                }
+            };
+        }
+    </script>
+</body>
+</html>
